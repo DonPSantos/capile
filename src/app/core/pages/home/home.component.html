@@ -1,23 +1,35 @@
-<div class="main-container">
-  <div class="card left">
-    <img src="../../../../assets/full-logo.png" />
-    <p>
+<div
+  class="flex flex-row align-items-center justify-content-center w-screen h-screen"
+>
+  <div
+    class="flex flex-column align-items-center justify-content-center h-27rem w-4 bg-black-alpha-90 border-round-left-3xl"
+  >
+    <img class="w-5" src="../../../../assets/full-logo.png" />
+    <p class="text-primary font-normal text-justify mx-6">
       Venha conhecer o Capilé! Informe seus dados e ganhe um drink para brindar
       com a gente. Aproveite!!!!!
     </p>
   </div>
 
-  <div class="card right">
-    <form>
-      <mat-form-field appearance="outline">
-        <mat-label>Nome</mat-label>
-        <input matInput class="custom-mat-input" />
-      </mat-form-field>
+  <div
+    class="flex flex-column align-items-center justify-content-center h-27rem w-4 surface-100 border-round-right-3xl"
+  >
+    <form class="flex flex-column align-items-center max-w-max">
+      <span class="p-float-label m-3">
+        <input pInputText id="name" />
+        <label htmlFor="name">Nome</label>
+      </span>
 
-      <mat-form-field appearance="outline">
-        <mat-label>CPF</mat-label>
-        <input matInput />
-      </mat-form-field>
+      <span class="p-float-label m-3">
+        <p-inputMask
+          styleClass="w-full"
+          mask="999.999.999-99"
+          id="cpf"
+        ></p-inputMask>
+        <label htmlFor="cpf">CPF</label>
+      </span>
+
+      <p-button class="m-3" label="Ganhar DRINK"></p-button>
     </form>
   </div>
 </div>
