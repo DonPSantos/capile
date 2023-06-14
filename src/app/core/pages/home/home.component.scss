@@ -1,0 +1,41 @@
+@import "../../../../styles/variables.scss";
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+img {
+  width: 40%;
+}
+p {
+  color: $green-main;
+  text-align: justify;
+  padding: 0 10% 0 10%;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+  height: 60%;
+  border-radius: 20px;
+}
+.left {
+  background: $black;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.right {
+  background: $gray-light;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}

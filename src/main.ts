@@ -1,7 +1,17 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
+import { Routes, provideRouter } from '@angular/router';
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { HomeComponent } from './app/core/pages/home/home.component';
 
-import { AppModule } from './app/app.module';
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+    title: 'Capilé',
+  },
+];
 
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [provideRouter(routes), provideAnimations(), provideAnimations()],
+}).catch((err) => console.error(err));
