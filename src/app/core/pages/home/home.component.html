@@ -1,8 +1,8 @@
 <div
-  class="flex flex-row align-items-center justify-content-center w-screen h-screen"
+  class="flex flex-column md:flex-row align-items-center justify-content-center w-screen h-screen fixed"
 >
   <div
-    class="flex flex-column align-items-center justify-content-center h-27rem w-4 bg-black-alpha-90 border-round-left-3xl"
+    class="flex flex-column align-items-center justify-content-center bg-black-alpha-90 h-27rem w-7 sm:w-4"
   >
     <img class="w-5" src="../../../../assets/full-logo.png" />
     <p class="text-primary font-normal text-justify mx-6">
@@ -27,10 +27,10 @@
   </div>
 
   <div
-    class="flex flex-column align-items-center justify-content-center h-27rem w-3 surface-100 border-round-right-3xl"
+    class="flex flex-column align-items-center justify-content-center h-27rem w-7 md:w-3 surface-100"
   >
     <form class="flex flex-column align-items-center w-8">
-      <span class="p-float-label m-3 w-full">
+      <span class="p-float-label m-3 w-full ng-invalid ng-dirty">
         <input class="w-full" pInputText id="name" />
         <label htmlFor="name">Nome</label>
       </span>
