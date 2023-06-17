@@ -1,5 +1,5 @@
 <div
-  class="flex flex-column md:flex-row align-items-center justify-content-center w-full h-full fixed py-3 md:p-0"
+  class="flex flex-column md:flex-row align-items-center justify-content-center w-full h-full py-3 md:p-0"
 >
   <div
     class="flex flex-column align-items-center justify-content-center bg-black-alpha-90 h-27rem w-10 sm:w-4"
@@ -44,7 +44,15 @@
         <label htmlFor="cpf">CPF</label>
       </span>
 
-      <p-button class="m-3" label="Ganhar DRINK"></p-button>
+      <p-button
+        class="m-3"
+        label="Ganhar DRINK"
+        (click)="showDialog()"
+      ></p-button>
     </form>
   </div>
+
+  <p-dialog header="BETA" [(visible)]="visible" [style]="{ width: '50vw' }">
+    <p>Ainda é só um preview, logo estará funcional!!!</p>
+  </p-dialog>
 </div>

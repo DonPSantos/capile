@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { InputMaskModule } from 'primeng/inputmask';
+import { DialogModule } from 'primeng/dialog';
 
 //shared
 import { SocialMediaIconComponent } from 'src/app/shared/components/social-media-icon/social-media-icon.component';
@@ -20,8 +21,15 @@ import { SocialMediaIconComponent } from 'src/app/shared/components/social-media
     ButtonModule,
     InputMaskModule,
     SocialMediaIconComponent,
+    DialogModule,
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {}
+export class HomeComponent {
+  visible: boolean = false;
+
+  showDialog() {
+    this.visible = true;
+  }
+}
