@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "start": "ng serve --configuration=localhost --proxy-config src/proxy.conf.json",
+    "build": "ng build --configuration=production --proxy-config src/proxy.conf.json",
+    "watch": "ng build --watch --configuration development --proxy-config src/proxy.conf.json",
     "test": "ng test"
   },
   "private": true,

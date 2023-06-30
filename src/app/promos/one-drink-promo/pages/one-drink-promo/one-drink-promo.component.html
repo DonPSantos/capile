@@ -1,0 +1,64 @@
+<div
+  class="flex flex-column md:flex-row align-items-center justify-content-center w-full h-full py-3 md:p-0"
+>
+  <div
+    class="flex flex-column align-items-center justify-content-center bg-black-alpha-90 h-27rem w-10 sm:w-4"
+  >
+    <img class="w-5" src="../../../../assets/full-logo.png" />
+    <p class="text-primary font-normal text-justify mx-6">
+      Venha conhecer o Capilé! Informe seus dados e ganhe um drink para brindar
+      com a gente. Aproveite!!!!!
+    </p>
+    <div class="flex flex-row">
+      <app-social-media-icon
+        iconName="pi-instagram"
+        iconColor="#39ff14"
+        link="https://www.instagram.com/capiledrinks/"
+        class="mx-3"
+      />
+
+      <app-social-media-icon
+        iconName="pi-whatsapp"
+        iconColor="#39ff14"
+        link="https://api.whatsapp.com/send?phone=5534997683993"
+        class="mx-3"
+      />
+
+      <app-social-media-icon
+        iconName="pi-map-marker"
+        iconColor="#39ff14"
+        link="https://goo.gl/maps/Lt1RXWJNdpfhbrhZ7"
+        class="mx-3"
+      />
+    </div>
+  </div>
+
+  <div
+    class="flex flex-column align-items-center justify-content-center h-27rem w-10 md:w-3 surface-100"
+  >
+    <p-toast></p-toast>
+
+    <form
+      [formGroup]="registerForm"
+      (ngSubmit)="onSubmit()"
+      class="flex flex-column align-items-center w-8"
+    >
+      <span class="p-float-label m-3 w-full ng-invalid ng-dirty">
+        <input class="w-full" pInputText id="name" formControlName="name" />
+        <label htmlFor="name">Nome</label>
+      </span>
+
+      <span class="p-float-label m-3 w-full">
+        <p-inputMask
+          [style]="{ width: '100%' }"
+          mask="999.999.999-99"
+          id="cpf"
+          formControlName="cpf"
+        />
+        <label htmlFor="cpf">CPF</label>
+      </span>
+
+      <p-button type="submit" class="m-3" label="Ganhar DRINK"></p-button>
+    </form>
+  </div>
+</div>

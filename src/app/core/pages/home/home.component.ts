@@ -27,9 +27,5 @@ import { SocialMediaIconComponent } from 'src/app/shared/components/social-media
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  visible: boolean = false;
 
-  showDialog() {
-    this.visible = true;
-  }
 }

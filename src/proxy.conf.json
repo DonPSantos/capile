@@ -1,0 +1,10 @@
+{
+  "/localhost": {
+    "target": "http://localhost:44326",
+    "secure": false
+  },
+  "/production": {
+    "target": "https://pub-hjb2.onrender.com",
+    "secure": false
+  }
+}
